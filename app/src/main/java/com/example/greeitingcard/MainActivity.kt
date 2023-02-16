@@ -9,6 +9,7 @@ import androidx.compose.material.Surface
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.greeitingcard.ui.theme.GreeitingCardTheme
 
@@ -22,7 +23,7 @@ class MainActivity : ComponentActivity() {
                     modifier = Modifier.fillMaxSize(),
                     color = MaterialTheme.colors.background
                 ) {
-                    Greeting("Android")
+                    Greeting("Roman")
                 }
             }
         }
@@ -31,13 +32,15 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 fun Greeting(name: String) {
-    Text(text = "Hello $name!")
+    Surface(color = Color.Red) {
+        Text(text = "Hi, my name is $name!")
+    }
 }
 
 @Preview(showBackground = true)
 @Composable
 fun DefaultPreview() {
     GreeitingCardTheme {
-        Greeting("Android")
+        Greeting("Roman")
     }
 }
